@@ -11,6 +11,14 @@ A RAG (Retrieval-Augmented Generation) based AI chatbot designed to behave like 
 - **Context-Aware Responses**: Retrieves relevant knowledge base content to enhance AI responses
 - **Docker Support**: Complete containerized setup for easy deployment
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="img/img1.jpeg" alt="Swami AI Screenshot 1" width="300" />
+  <img src="img/img2.jpeg" alt="Swami AI Screenshot 2" width="300" />
+  <img src="img/img3.jpeg" alt="Swami AI Screenshot 3" width="300" />
+</div>
+
 ## 🏗️ Architecture
 
 The project consists of three main components:
