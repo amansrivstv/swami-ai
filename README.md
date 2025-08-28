@@ -15,7 +15,6 @@ A RAG (Retrieval-Augmented Generation) based AI chatbot designed to behave like 
 
 <div align="center">
   <img src="img/img1.jpeg" alt="Swami AI Screenshot 1" width="300" />
-  <img src="img/img2.jpeg" alt="Swami AI Screenshot 2" width="300" />
   <img src="img/img3.jpeg" alt="Swami AI Screenshot 3" width="300" />
 </div>
 
