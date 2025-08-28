@@ -258,11 +258,6 @@ weaviate_data/
 *.tflite
 *.pb
 
-# Large data files
-*.csv
-*.json
-*.xml
-*.txt
 !requirements.txt
 !README.md
 !LICENSE
