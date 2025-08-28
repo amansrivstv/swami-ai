@@ -258,6 +258,7 @@ weaviate_data/
 *.tflite
 *.pb
 run-with-ngrok.sh
+ngrok.yml
 !requirements.txt
 !README.md
 !LICENSE
