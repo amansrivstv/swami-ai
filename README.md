@@ -32,11 +32,6 @@ The project consists of three main components:
 - **Weaviate** vector database container
 - **Nginx** for frontend serving (in production)
 
-## 📋 Prerequisites
-
-- **Docker** and **Docker Compose**
-- **TogetherAI API Key** (free tier available)
-- **Git**
 
 ## 🛠️ Setup Instructions
 

@@ -257,7 +257,7 @@ weaviate_data/
 *.onnx
 *.tflite
 *.pb
-
+run-with-ngrok.sh
 !requirements.txt
 !README.md
 !LICENSE
