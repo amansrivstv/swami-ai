@@ -1,0 +1,13 @@
+name: swami-ai-frontend
+services:
+  - name: frontend
+    source_dir: /frontend
+    github:
+      repo: amansrivstv/swami-ai
+      branch: main
+    run_command: nginx -g 'daemon off;'
+    environment_slug: nginx
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /

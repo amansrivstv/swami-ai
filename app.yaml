@@ -1,0 +1,51 @@
+name: swami-ai
+services:
+  - name: frontend
+    source_dir: /frontend
+    github:
+      repo: amansrivstv/swami-ai
+      branch: main
+    run_command: nginx -g 'daemon off;'
+    environment_slug: nginx
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+
+  - name: backend
+    source_dir: /backend
+    github:
+      repo: amansrivstv/swami-ai
+      branch: main
+    run_command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    environment_slug: python
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    envs:
+      - key: TOGETHER_API_KEY
+        scope: RUN_AND_BUILD_TIME
+        value: ${TOGETHER_API_KEY}
+      - key: WEAVIATE_URL
+        scope: RUN_TIME
+        value: ${WEAVIATE_URL}
+
+  - name: weaviate
+    source_dir: /
+    github:
+      repo: amansrivstv/swami-ai
+      branch: main
+    run_command: |
+      docker run -d \
+        --name weaviate \
+        -p 8080:8080 \
+        -e QUERY_DEFAULTS_LIMIT=25 \
+        -e AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true \
+        -e PERSISTENCE_DATA_PATH='/var/lib/weaviate' \
+        -e ENABLE_API_BASED_MODULES=true \
+        -e CLUSTER_HOSTNAME='node1' \
+        cr.weaviate.io/semitechnologies/weaviate:1.32.4
+    environment_slug: docker
+    instance_count: 1
+    instance_size_slug: basic-xxs
+
+
